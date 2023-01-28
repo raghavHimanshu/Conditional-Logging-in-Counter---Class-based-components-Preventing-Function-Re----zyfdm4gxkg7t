@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    border: 2px solid #205295;
+    padding: 40px;
+    margin:10% 40%;
+    background-color: white;
+    border-radius: 3px;
+}
+
+#count{
+    margin-bottom: 1rem;
+}
+
+#incr-btn{
+    all: unset;
+    border: 2px solid #0096FF;
+    padding: 5px;
+    color: #00337C;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#incr-btn:hover{
+    background-color: #C3F8FF;
+    color: #205295;
+    border: 2px solid #205295;
+}

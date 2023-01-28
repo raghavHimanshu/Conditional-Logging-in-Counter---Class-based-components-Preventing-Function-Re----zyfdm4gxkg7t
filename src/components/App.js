@@ -3,8 +3,11 @@ import '../styles/App.css';
 
 class App extends React.Component{
   
-  handleClick(){
-    this.setState({count: this.state.count + 1})
+  handleClick() {
+    // this.setState({ even: this.state.even + 1 })
+    // if (this.state.even % 2 === 0) {
+      this.setState({count: this.state.count + 1})
+    //}
   }
   constructor(props){
     super(props)
@@ -12,17 +15,17 @@ class App extends React.Component{
     this.handleClick = this.handleClick.bind(this)
   }
 
-  componentWillUpdate() {
-    if(this.state.count % 2 === 0){
-      this.setState({even:this.state.even = this.state.count})
-    }
-  }
+  // componentWillUpdate() {
+  //   if(this.state.count % 2 === 0){
+  //     // {this.state.even % 2 === 0 && console.log(`Rendering with count:-${this.state.count}`)}
+  //   }
+  // }
 
   render(){
-    console.log(`Rendering with count:-${this.state.even}`)
+    {this.state.count % 2 === 0 && console.log(`Rendering with count:-${this.state.count}`)}
     return(
-      <div>
-        <span id="count">{this.state.even}</span>
+      <div id="main">
+        <span id="count">{this.state.count % 2 === 0 ? this.state.count : this.state.count-1}</span>
         <button id="incr-btn" onClick={this.handleClick}>Increment</button>
       </div>
     )
