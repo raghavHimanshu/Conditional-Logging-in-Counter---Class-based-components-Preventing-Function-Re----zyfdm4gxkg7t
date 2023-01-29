@@ -4,22 +4,14 @@ import '../styles/App.css';
 class App extends React.Component{
   
   handleClick() {
-    // this.setState({ even: this.state.even + 1 })
-    // if (this.state.even % 2 === 0) {
-      this.setState({count: this.state.count + 1})
-    //}
+    this.setState({count: this.state.count + 1})
+
   }
   constructor(props){
     super(props)
     this.state = {count:0,even:0}
     this.handleClick = this.handleClick.bind(this)
   }
-
-  // componentWillUpdate() {
-  //   if(this.state.count % 2 === 0){
-  //     // {this.state.even % 2 === 0 && console.log(`Rendering with count:-${this.state.count}`)}
-  //   }
-  // }
 
   render(){
     {this.state.count % 2 === 0 && console.log(`Rendering with count:-${this.state.count}`)}
@@ -34,3 +26,5 @@ class App extends React.Component{
 }
 
 export default App;
+
+
